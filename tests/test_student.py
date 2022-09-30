@@ -46,6 +46,9 @@ def test_get_student_with_more_classes():
 
     # TODO: write assertions
     assert get_student_with_more_classes(charles, ada) == ada
-    # assert charles.
+    assert get_student_with_more_classes(ada, charles) == ada
 
 # TODO: Write additional tests to reach 100% test coverage
+def test_empty_student():
+    empty_student = create_student(None, None, None)
+    assert len(empty_student) == 0
